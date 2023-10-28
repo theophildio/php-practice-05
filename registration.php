@@ -12,7 +12,7 @@ if (isset($_POST["register"])) {
     if (empty($fullName) && empty($email) && empty($password)) {
         array_push($errors, "All fields are empay!");
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        array_push($errors, "Email is invalid1");
+        array_push($errors, "Email is invalidl");
     } elseif (strlen($password) < 8) {
         array_push($errors, "Password must be at least 8 characters long!");
     }
@@ -21,6 +21,8 @@ if (isset($_POST["register"])) {
             $errorMsg = "<p class='alert alert-error text-white'><small>{$error}</small></p>";
         }
     } else {
+        // $fp = fopen("./db/users.txt", "r");
+
         $openFile = fopen("./db/users.txt", "a");
         fwrite($openFile, "\n{$fullName},{$email},{$password},{$role}");
         fclose($openFile);

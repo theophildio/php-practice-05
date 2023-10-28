@@ -6,8 +6,6 @@ if (!isset($_SESSION["email"])) {
 }
 if ($_SESSION["role"] == "user") {
     header("Location: users.php");
-} elseif ($_SESSION["role"] == "manager") {
-    header("Location: manager.php");
 } else {
     header("Location: role_manage.php");
 }
