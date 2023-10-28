@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (!isset($_SESSION["role"]) || $_SESSION["role"] !== "user") {
+    header("Location: login.php");
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +26,12 @@
             </div>
             <div class="flex-none">
                 <ul class="menu menu-horizontal px-1">
-                    <li><a>Link</a></li>
+                    <li class="capitalize">
+                       <a href=""><?php echo $_SESSION["role"]; ?></a>
+                    </li>
+                    <li class="capitalize">
+                        <a href="./logout.php">Log out</a>
+                    </li>
                 </ul>
             </div>
         </div>

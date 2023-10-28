@@ -1,9 +1,17 @@
+<?php
+session_start();
+
+if (!isset($_SESSION["role"]) || $_SESSION["role"] !== "manager") {
+    header("Location: login.php");
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crew ProjectS</title>
+    <title>Crew Projects</title>
     <!-- Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.3/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -17,7 +25,12 @@
             </div>
             <div class="flex-none">
                 <ul class="menu menu-horizontal px-1">
-                    <li><a>Link</a></li>
+                    <li class="capitalize">
+                       <a href=""><?php echo $_SESSION["role"]; ?></a>
+                    </li>
+                    <li class="capitalize">
+                        <a href="./logout.php">Log out</a>
+                    </li>
                 </ul>
             </div>
         </div>

@@ -1,3 +1,4 @@
 theophil,theo@admin.com,passcode,admin
 grace,grace@mail.com,12345678,manager
 jini,jini@mail.com,87654321,user
+john doe,john@mail.com,12345678,user
