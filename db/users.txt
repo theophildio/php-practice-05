@@ -1,3 +1,2 @@
 theophil,theo@admin.com,passcode,admin
 john doe,john@mail.com,12345678,user
-grace,grace@mail.com,asdf1234,user

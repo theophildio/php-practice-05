@@ -36,5 +36,33 @@ if (!isset($_SESSION["role"]) || $_SESSION["role"] !== "user") {
             </div>
         </div>
     </header>
+    <section>
+    <div class="col-span-2">
+            <div class="overflow-x-auto">
+                <table class="table border border-1">
+                    <!-- head -->
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Role</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!-- row 1 -->
+                    <tr>
+                        <th>1</th>
+                        <td>John Deo</td>
+                        <td>john@deo.com</td>
+                        <td>********</td>
+                        <td>User</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
